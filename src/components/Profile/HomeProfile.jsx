@@ -184,7 +184,7 @@ useEffect(() => {
                       </span>
                       <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
                        ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                          <MdPictureAsPdf className="text-Darkblue text-center " size={30}/>
+                          <img src={gdrive} className="h-[30px] w-[50px]  max-sm:ml-[30px] max-sm:w-[50px]" />
                        </button>
                     </div>
                     </div>
@@ -232,7 +232,7 @@ useEffect(() => {
                       </span>
                       <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
                        ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                          <MdPictureAsPdf className="text-Darkblue text-center " size={30}/>
+                           <img src={gdrive} className="h-[30px] w-[50px]  max-sm:ml-[30px] max-sm:w-[50px]" />
                        </button>
                     </div>
                     </div>
@@ -280,7 +280,7 @@ useEffect(() => {
                       </span>
                       <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
                        ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                          <MdPictureAsPdf className="text-Darkblue text-center " size={30}/>
+                          <img src={gdrive} className="h-[30px] w-[50px]  max-sm:ml-[30px] max-sm:w-[50px]" />
                        </button>
                     </div>
                     </div>

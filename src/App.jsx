@@ -5,6 +5,8 @@ import LearningProfile from "./components/Profile/LearningProfile";
 import AnalyticsProfile from './components/Profile/AnalyticsProfile';
 import Certifications from "./components/Profile/Certifications";
 import SkillCentreNavbar from './components/SkillCentreNavbar';
+
+
 function App() {
   
   return (
@@ -16,6 +18,7 @@ function App() {
 			<Route path="/SkillCentre/profile/learnings" element={<LearningProfile />} />
 			<Route path="/SkillCentre/profile/analytics" element={<AnalyticsProfile />} />
 			<Route path="/SkillCentre/profile/certifications" element={<Certifications />} />
+      
        
     </Routes>
     </BrowserRouter>
