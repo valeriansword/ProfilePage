@@ -5,6 +5,9 @@ function DriveFilePicker() {
     
   const [openPicker,data,authResponse]=useDrivePicker();
 
+  //below down is the api for gdrive file picker please do create your own apikey for 
+  //the custormer to upload file i have created this using my gmail id
+  //so you create this with the company id
   const handleClick=()=>{
     openPicker({
       clientId: "687826912462-d6vg873c90345g0t2rm68dles95q78rd.apps.googleusercontent.com",
@@ -34,7 +37,7 @@ function DriveFilePicker() {
    
   return (
     <div>
-      <button onClick={()=>handleClick()}><img src={gdrive} className=" w-[40px] ml-[10px] max-sm:w-[50px] max-sm:h-[40px]" /></button>
+      <button onClick={()=>handleClick()} className='h-[20px] pt-[2px]'><img src={gdrive} className=" w-[40px]  max-sm:w-[50px] " /></button>
     </div>
   )
 }

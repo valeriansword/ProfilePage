@@ -129,7 +129,8 @@ useEffect(() => {
                 <div className="flex md:space-x-6 w-full max-sm:flex-col">
                 <span className=" w-[50%] flex space-y-2 flex-col text-lg font-semibold text-Darkblue mt-[20px] max-sm:w-full">
                   <h1>Upload your resume</h1>
-                  <button onCLick={()=>handleOpenPicker()} className="bg-White text-Yellow font-bold text-lg border-none ring-2 ring-white rounded-md w-[15%] max-sm:w-[30%]">
+                  <button onCLick={()=>handleOpenPicker()} className="bg-White text-Yellow font-bold text-lg
+                   border-none ring-2 ring-white rounded-md w-[20%] max-sm:w-[30%] ">
                     {/* <img src={gdrive} className="h-[30px] w-[40px] ml-[10px]" /> */}
                     <DriveFilePicker />
                   </button>
@@ -145,6 +146,7 @@ useEffect(() => {
               </div>
             </div>
           </div>
+          {/* see edit profile component for better understanding */}
 
           <EditProfile editProfile={editProfile} onClose={()=>setEditProfile(false)} handleData1={handleData1}/>
 
@@ -198,7 +200,7 @@ useEffect(() => {
                       <button className="bg-White text-Yellow font-bold
                        text-lg border-none ring-2 ring-white 
                        rounded-md w-[20%] h-[30px] max-sm:w-[30%]">
-                          <img src={gdrive} className="h-[30px] w-[50px] ml-[10px] max-sm:ml-[30px] max-sm:w-[50px]" />
+                          <DriveFilePicker />
                        </button>
                     </div>
                     <div className="flex mt-[30px] w-[50%] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
@@ -208,7 +210,7 @@ useEffect(() => {
                       </span>
                       <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
                        ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                          <img src={gdrive} className="h-[30px] w-[50px] max-sm:mr-[30px]  max-sm:ml-[30px] max-sm:w-[50px]" />
+                         <DriveFilePicker />
                        </button>
                     </div>
                     </div>
@@ -246,7 +248,7 @@ useEffect(() => {
                       <button className="bg-White text-Yellow font-bold
                        text-lg border-none ring-2 ring-white 
                        rounded-md w-[20%] h-[30px] max-sm:w-[30%]">
-                          <img src={gdrive} className="h-[30px] w-[50px] ml-[10px] max-sm:ml-[30px] max-sm:w-[50px]" />
+                          <DriveFilePicker />
                        </button>
                     </div>
                     <div className="flex mt-[30px] w-[50%] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
@@ -254,9 +256,10 @@ useEffect(() => {
                       <p className="text-white text-lg font-bold">Proposal:</p>
                       {/* <p className="text-white">(view the pdf)</p> */}
                       </span>
-                      <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
-                       ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                           <img src={gdrive} className="h-[30px] w-[50px]  max-sm:w-[50px]" />
+                      <button className="bg-White text-Yellow font-bold text-lg 
+                      border-none ring-2 ring-white rounded-md
+                       w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
+                           <DriveFilePicker />
                        </button>
                     </div>
                     </div>
@@ -294,7 +297,7 @@ useEffect(() => {
                       <button className="bg-White text-Yellow font-bold
                        text-lg border-none ring-2 ring-white 
                        rounded-md w-[20%] h-[30px] max-sm:w-[30%]">
-                          <img src={gdrive} className="h-[30px] w-[50px] ml-[10px] max-sm:ml-[30px] max-sm:w-[50px]" />
+                          <DriveFilePicker />
                        </button>
                     </div>
                     <div className="flex mt-[30px] w-[50%] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
@@ -304,7 +307,7 @@ useEffect(() => {
                       </span>
                       <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
                        ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                          <img src={gdrive} className="h-[30px] w-[50px]  max-sm:ml-[30px] max-sm:w-[50px]" />
+                         <DriveFilePicker />
                        </button>
                     </div>
                     </div>
