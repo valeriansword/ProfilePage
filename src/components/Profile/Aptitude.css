@@ -23,16 +23,22 @@
     width: fit-content;
     height: 500px;
     overflow: scroll;
-    overflow-x: hidden;
+    
     border-radius: 10px;
 }
-
+.graph{
+    width:400px;
+    height: 400px;
+}
 @media(max-width:600px){
     .overLayComments-container{
         width:90%;
     }
     .graph{
-        width:200px;
-        overflow-x:auto;
+        width:120px;
+        height: 120px;
+        overflow-x: scroll;
+        
+        
     }
 }

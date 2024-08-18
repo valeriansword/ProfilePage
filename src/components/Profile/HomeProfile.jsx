@@ -9,15 +9,14 @@ import admin from "../../assets/admin.png";
 import library from "../../assets/library.jfif";
 import "./HomeProfile.css";
 import { MdPictureAsPdf } from "react-icons/md";
-
-
+import useDrivePicker from 'react-google-drive-picker'
+import DriveFilePicker from "./DriveFilePicker";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
 function HomeProfile() {
   const[editProfile,setEditProfile]=useState(false);
-  const data={
-  }
+  
   const [fullName,setFullName]=useState("")
   const [EmailId,setEmailId]=useState("")
   const [PhoneNumber,setPhoneNumber]=useState("")
@@ -37,6 +36,30 @@ function HomeProfile() {
 useEffect(() => {
   Aos.init();
 }, []);
+
+  const [openPicker,data,authResponse]=useDrivePicker();
+
+  const handleOpenPicker=()=>{
+    openPicker({
+      clientId: "687826912462-d6vg873c90345g0t2rm68dles95q78rd.apps.googleusercontent.com",
+      developerKey: "AIzaSyDwHpjxzWp8nN26e8FVkzf90aTLrZ4OxPc",
+      viewId: "DOCS",
+      // token: token, // pass oauth token in case you already have one
+      showUploadView: true,
+      showUploadFolders: true,
+      supportDrives: true,
+      multiselect: true,
+    })
+    window.alert("you are clicking picker");
+
+  }
+
+  useEffect(()=>{
+    if(data){
+      data.docs.map((i)=>console.log(i))
+    }
+  },[data]);
+
   return (
     <div className=" w-full h-full font-times max-sm:w-full">
       <div className="flex w-full h-full max-sm:w-full">
@@ -106,8 +129,9 @@ useEffect(() => {
                 <div className="flex md:space-x-6 w-full max-sm:flex-col">
                 <span className=" w-[50%] flex space-y-2 flex-col text-lg font-semibold text-Darkblue mt-[20px] max-sm:w-full">
                   <h1>Upload your resume</h1>
-                  <button className="bg-White text-Yellow font-bold text-lg border-none ring-2 ring-white rounded-md w-[15%] max-sm:w-[30%]">
-                    <img src={gdrive} className="h-[30px] w-[40px] ml-[10px]" />
+                  <button onCLick={()=>handleOpenPicker()} className="bg-White text-Yellow font-bold text-lg border-none ring-2 ring-white rounded-md w-[15%] max-sm:w-[30%]">
+                    {/* <img src={gdrive} className="h-[30px] w-[40px] ml-[10px]" /> */}
+                    <DriveFilePicker />
                   </button>
                 </span>
                 <span className="w-[50%] flex space-y-2 flex-col text-lg font-semibold text-Darkblue mt-[20px] max-sm:w-full">
@@ -165,8 +189,8 @@ useEffect(() => {
                         <input type="text" className="outline-none rounded-md w-full " placeholder="provide if you have deployed" />
                       </span>
                     </div>
-                    <div className="flex w-full justify-around">
-                    <div className="flex w-[50%] mt-[30px] max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
+                    <div className="flex w-full justify-around max-sm:flex-col">
+                    <div className="flex w-[50%] mt-[30px] max-sm:mt-[20px] max-sm:w-full md:ml-[20px] space-x-2 ">
                       <span className="flex-col">
                         <p className="text-white text-lg font-bold">Working Model:</p>
                         <p className="text-white">(website video link)</p>
@@ -177,14 +201,14 @@ useEffect(() => {
                           <img src={gdrive} className="h-[30px] w-[50px] ml-[10px] max-sm:ml-[30px] max-sm:w-[50px]" />
                        </button>
                     </div>
-                    <div className="flex mt-[30px] w-[50%] max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
+                    <div className="flex mt-[30px] w-[50%] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
                       <span className="flex-col">
                       <p className="text-white text-lg font-bold">Proposal:</p>
                       {/* <p className="text-white">(view the pdf)</p> */}
                       </span>
                       <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
                        ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                          <img src={gdrive} className="h-[30px] w-[50px]  max-sm:ml-[30px] max-sm:w-[50px]" />
+                          <img src={gdrive} className="h-[30px] w-[50px] max-sm:mr-[30px]  max-sm:ml-[30px] max-sm:w-[50px]" />
                        </button>
                     </div>
                     </div>
@@ -213,8 +237,8 @@ useEffect(() => {
                       <input type="text" className="outline-none rounded-md w-full " placeholder="provide if you have deployed" />
                     </span>
                     </div>
-                    <div className="flex w-full justify-around">
-                    <div className="flex w-[50%] mt-[30px] max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
+                    <div className="flex w-full justify-around max-sm:flex-col">
+                    <div className="flex w-[50%] mt-[30px] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
                       <span className="flex-col">
                         <p className="text-white text-lg font-bold">Working Model:</p>
                         <p className="text-white">(website video link)</p>
@@ -225,14 +249,14 @@ useEffect(() => {
                           <img src={gdrive} className="h-[30px] w-[50px] ml-[10px] max-sm:ml-[30px] max-sm:w-[50px]" />
                        </button>
                     </div>
-                    <div className="flex mt-[30px] w-[50%] max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
+                    <div className="flex mt-[30px] w-[50%] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
                       <span className="flex-col">
                       <p className="text-white text-lg font-bold">Proposal:</p>
                       {/* <p className="text-white">(view the pdf)</p> */}
                       </span>
                       <button className="bg-White text-Yellow font-bold text-lg border-none ring-2
                        ring-white rounded-md w-[20%] h-[30px] max-sm:w-[30%] flex justify-center items-center">
-                           <img src={gdrive} className="h-[30px] w-[50px]  max-sm:ml-[30px] max-sm:w-[50px]" />
+                           <img src={gdrive} className="h-[30px] w-[50px]  max-sm:w-[50px]" />
                        </button>
                     </div>
                     </div>
@@ -261,8 +285,8 @@ useEffect(() => {
                       <input type="text" className="outline-none rounded-md w-full " placeholder="provide if you have deployed" />
                     </span>
                     </div>
-                    <div className="flex w-full justify-around">
-                    <div className="flex w-[50%] mt-[30px] max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
+                    <div className="flex w-full justify-around max-sm:flex-col">
+                    <div className="flex w-[50%] mt-[30px] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
                       <span className="flex-col">
                         <p className="text-white text-lg font-bold">Working Model:</p>
                         <p className="text-white">(website video link)</p>
@@ -273,7 +297,7 @@ useEffect(() => {
                           <img src={gdrive} className="h-[30px] w-[50px] ml-[10px] max-sm:ml-[30px] max-sm:w-[50px]" />
                        </button>
                     </div>
-                    <div className="flex mt-[30px] w-[50%] max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
+                    <div className="flex mt-[30px] w-[50%] max-sm:w-full max-sm:mt-[20px] md:ml-[20px] space-x-2 ">
                       <span className="flex-col">
                       <p className="text-white text-lg font-bold">Proposal:</p>
                       {/* <p className="text-white">(view the pdf)</p> */}

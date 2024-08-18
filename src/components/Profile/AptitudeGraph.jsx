@@ -73,12 +73,13 @@ function AptitudeGraph({ isaptitude, onClose }) {
               <IoClose size="25" />
             </span>
           </div>
-          <ResponsiveContainer height={400} width={700} className="graph">
+          <ResponsiveContainer height={400} width={500} className="graph">
 
           <LineChart
           data={data}
           
           stroke="Yellow"
+          className="max-sm:h-[100px]"
         >
           <CartesianGrid strokeDasharray="3 3" stroke="white"/>
           <XAxis dataKey="name" stroke="white"/>

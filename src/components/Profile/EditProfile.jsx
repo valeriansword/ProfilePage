@@ -7,13 +7,13 @@ import "./EditProfile.css";
 
 function EditProfile({ editProfile, onClose,handleData1 }) {
   
-  const [data,setData]=useState([]);
+  
   const [email,setEmail]=useState("");
   const [name,setName]=useState("");
   const [phone,setPhone]=useState("");
   const [college,setCollege]=useState("");
   
-  const handleData=(e)=>{
+  const handleData=(e)=>{   //handleSubmit function that gets the data from the form
     e.preventDefault();
     handleData1(name,email,phone,college);
     onClose();
