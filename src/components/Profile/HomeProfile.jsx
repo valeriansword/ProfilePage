@@ -68,12 +68,13 @@ useEffect(() => {
         <div className="h-full w-[100%] ml-[10px] md:mr-[10px] flex flex-col">
 
           <div className="w-[100%] pb-2 mb-[50px] bg-Yellow relative top-[50px] pt-[50px] rounded-md max-sm:w-[98%] ">
+            <div className="w-full ">
             <img
               src={profile}
-              className="h-[100px] w-[100px] rounded-full absolute top-[-50px] left-[10px]"
-            />
+              className="h-[100px] w-[100px] rounded-full  absolute top-[-50px] left-[44%]"
+            /></div>
             {/* details */}
-            <div className=" w-[100%] h-full pl-[150px] max-sm:pl-[100px] max-sm:w-[97%]">
+            <div className=" w-[100%] h-full pl-[200px] pt-[30px] max-sm:pl-[50px] max-sm:w-[97%]">
               <div className="max-sm:w-[100%]">
                 {/* name and phone number */}
                 <span className=" max-sm:w-[100%] flex justify-between">

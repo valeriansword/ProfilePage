@@ -57,7 +57,7 @@ function AnalyticsProfile() {
         <div className='w-full ' >
             <span className='flex space-x-4 mb-[10px] '>
                 <h1 className='text-lg font-bold'>Hackathons</h1>
-                <p className='text-md font-normal underline cursor-pointer' >View wore</p>
+                <p className='text-md font-normal underline cursor-pointer' onClick={()=>setAptitude(true)} >View wore</p>
             </span>
             <div className='w-full grid grid-cols-3 md:space-x-2 max-sm:grid-cols-1 max-sm:space-y-2'>
         {HackathonData.map((data)=>(
@@ -80,7 +80,7 @@ function AnalyticsProfile() {
         <div className='w-full mt-[20px]' >
             <span className='flex space-x-4 mb-[10px] '>
                 <h1 className='text-lg font-bold'>Online Quiz</h1>
-                <p className='text-md font-normal underline cursor-pointer' >View wore</p>
+                <p className='text-md font-normal underline cursor-pointer' onClick={()=>setAptitude(true)}>View wore</p>
             </span>
             <div className='w-full grid grid-cols-3 space-x-2 md:space-x-2 max-sm:grid-cols-1 max-sm:space-y-2'>
         {onlinequiz.map((data)=>(
@@ -125,7 +125,7 @@ function AnalyticsProfile() {
         <div className='w-full mt-[20px]' >
             <span className='flex space-x-4 mb-[10px] '>
                 <h1 className='text-lg font-bold'>Coding Skill</h1>
-                <p className='text-md font-normal underline cursor-pointer ' >View wore</p>
+                <p className='text-md font-normal underline cursor-pointer ' onClick={()=>setAptitude(true)} >View wore</p>
             </span>
             <div className='w-full grid grid-cols-3 space-x-2 md:space-x-2 max-sm:grid-cols-1 max-sm:space-y-2'>
         {CodingSkill.map((data)=>(
