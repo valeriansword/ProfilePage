@@ -79,20 +79,21 @@ useEffect(() => {
                 {/* name and phone number */}
                 <span className=" max-sm:w-[100%] flex justify-between">
                   <h1 className="text-lg font-semibold text-Darkblue">
-                    {" "}
+                    {" "}Name:
                     {fullName?fullName:"John Doe"}
                   </h1>
                   <p className="md:pr-[200px] text-lg font-semibold text-Darkblue">
+                    Contact:
                   {PhoneNumber?PhoneNumber:"123456789"}
                   </p>
                 </span>
                 {/* phone number */}
                 <span className="flex text-lg font-semibold text-Darkblue mt-[20px]">
-                  <p> {EmailId?EmailId:"abcde@gmail.com"}</p>
+                  <p> Email:{EmailId?EmailId:"abcde@gmail.com"}</p>
                 </span>
                 {/* college*/}
                 <span className="flex text-lg font-semibold text-Darkblue mt-[20px]">
-                  <p> {CollegeName?CollegeName:"abc college of engineering and technology"}</p>
+                  <p> College:{CollegeName?CollegeName:"abc college of engineering and technology"}</p>
                 </span>
                 {/* github link */}
                 <span className="flex flex-col text-lg font-semibold text-Darkblue mt-[20px]">
