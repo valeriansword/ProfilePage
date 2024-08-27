@@ -10,6 +10,7 @@ import  AuthProvider  from './components/Profile/AuthProvider';
 import ProtectedComponent from './components/Profile/ProtectedComponent';
 
 
+
 function App() {
   
   return (
@@ -20,6 +21,7 @@ function App() {
     <Routes>
       {/* <Route path='/' element={<HomeProfile />}></Route> */}
       {/* <Route path="/" element={<Sampl />} /> */}
+      
       <Route path="/SkillCentre/profile" element={<HomeProfile />} />
 			<Route path="/SkillCentre/profile/learnings" element={<LearningProfile />} />
 			<Route path="/SkillCentre/profile/analytics" element={<AnalyticsProfile />} />
